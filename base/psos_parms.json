@@ -1,0 +1,12 @@
+{
+    "name":"PSOS Example 01 - Blink Builtin LED",
+    "main":"psos_main",
+    
+    "defaults": {
+        },
+        
+    "services": [
+        {"name": "blink", "module":"svc_blink"}
+     ]
+}
+    
