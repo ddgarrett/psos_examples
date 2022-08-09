@@ -1,0 +1,12 @@
+{
+    "name":"PSOS Example 02 - Blink Builtin LED via MQTT",
+    "main":"psos_main",
+    
+    "services": [
+        {"name": "wifi", "module":"svc_wifi",  "wifi":"wifi_home", "disconnect":true},
+        {"name": "mqtt", "module":"svc_mqtt",  "broker":"mqtt_hivemq_public" },
+    
+        {"name": "blink", "module":"svc_blink", "subscr_topic":"psos/ex02/blink"}
+     ]
+}
+    
