@@ -1,0 +1,15 @@
+{
+    "name":"PSOS Example 03 - ESP32 DHT11 Temperature/Humidity Sensor",
+    "main":"psos_main",
+    
+    "services": [
+        {"name": "wifi", "module":"svc_wifi",  "wifi":"wifi_home", "disconnect":true},
+        {"name": "mqtt", "module":"svc_mqtt",  "broker":"mqtt_hivemq_public" },
+
+        {"name": "log",  "module":"svc_log",   "pub_log":"psos/e01/log" },
+    
+        {"name": "temp", "module":"svc_dht11", "dht11_pin":5,
+             "subscr_upd":"psos/e01/dht/upd",   "pub_upd":"psos/e01/dht" }
+     ]
+}
+    
