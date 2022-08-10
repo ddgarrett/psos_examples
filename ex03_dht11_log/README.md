@@ -81,3 +81,9 @@ You may get a message such as `{"hum": "...", "temp": "starting..."}`.
 This simply means the reading failed, which it may do when you first start the microcontroller. Try publishing the `.../dht/upd` message again. If you continue to recieve the `starting` message, check your DHT11 pin connections. The DHT11 `+` should be connected to the microcontroller `3v3` pin, the DHT11 `-` to ground and the DHT11 `out` connected to the microcontroller pin marked `D5` for both the ESP32 and ESP8266.
 
 You can now disconnect the microcontrollers from your computer and Thonny and hook them up to USB outlet or batter. You should see the startup message in the webpage again and you should be able to generate updated temperature and humidity messages... anywhere there is a wifi connection for your microcontrollers and an internet connection for your websocket webpage.
+
+That's all there is to it! Pretty simple really. A simple JSON file, a couple of microcontrollers and a couple of DHT11 sensors. All of which can be controlled via a Web browser running the Websocket client.
+
+But keep in mind that the public HiveMQ MQTT broker is completely open to the 
+public. We've used the prefix `psos/...` to reduce the possibility of 
+someone else subscribing or publishing to our topics, but there's no guarantee. Next we'll walk through how to set up a free private HiveMQ MQTT broker and connect to it. With the proper secrets file it's really no more difficult than using the public broker, mainly because all of the connection details are taken care of by the MQTT service `svc_mqtt.py`.
