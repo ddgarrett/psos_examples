@@ -57,3 +57,5 @@ Similar subscribing messages should show in the websocket webpage client as well
 ![image info](../images/ex05_esp32.png)
 
 Note that if you want to, you can easily change the `pub_touch` topics in the JSON file to be `psos/d01/dht/upd` and `psos/d01/mem/upd` and the values reported will be from the ESP8266.
+
+Using the ESP32 capactivie touch sensors we've been able to eliminate the need for the websocket client to publish update request messages, but we're still using the websocket webpage to display temperature/humidity and memory usage. In the next example we'll introduce the use of an LCD display to replace the display as well. 
