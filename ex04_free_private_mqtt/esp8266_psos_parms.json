@@ -1,0 +1,14 @@
+{
+    "name":"PSOS Example 04 - ESP8266 Private HiveMQ Broker",
+    "main":"psos_main",
+    
+    "services": [
+        {"name": "wifi", "module":"svc_wifi",  "wifi":"wifi_home", "disconnect":true},
+        {"name": "mqtt", "module":"svc_mqtt",  "broker":"mqtt_hivemq" },
+    
+        {"name": "log",  "module":"svc_log",   "pub_log":"psos/d01/log" },
+    
+        {"name": "temp", "module":"svc_dht11", "dht11_pin":14,
+             "subscr_upd":"psos/d01/dht/upd",   "pub_upd":"psos/d01/dht" }     ]
+}
+    
