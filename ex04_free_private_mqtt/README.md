@@ -54,7 +54,7 @@ Finally, the JSON parms have been modified slightly to change the value of a par
         {"name": "mqtt", "module":"svc_mqtt",  "broker":"mqtt_hivemq" },
 ```
 
-We'll also have a slight change int he Websocket web page client previously used to monitor and generate MQTT messages as shown in the screen capture below.
+We'll also have a slight change the [Websocket web page client](http://www.hivemq.com/demos/websocket-client/?) previously used to monitor and generate MQTT messages as shown in the screen capture below.
 
 ![image info](../images/ex04_hivemq_websocket.png)
 
@@ -83,3 +83,7 @@ Using the webpage publish a message to the topic specified in the log message
 You should then see two new messages on the web page
 
 ![image info](../images/ex04_temp_humidity.png)
+
+Just as an aside, entering your host, username and password on the webpage can be a bit of a pain. Easing that a bit is that you copy that information from your `secrets.py` file. You'll also need to change the port to 8884 and check the SSL box.
+
+**Careful!** The websocket client uses port 8884, a different port from your microcontroller which uses port 8883.
