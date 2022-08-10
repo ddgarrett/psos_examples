@@ -62,7 +62,7 @@ Note the following changes from the previous websocket page:
 1. The host is the value for your HiveMQ host 
 2. Port is now 8884
 3. Username and Password are now required
-4. Check the XXL box
+4. Check the SSL box
 
 Press connect and you should be able to connect to your HiveMQ broker!
 
