@@ -1,0 +1,25 @@
+{
+    "name":"PSOS Example 04 - ESP32 Private HiveMQ Broker",
+    "main":"psos_main",
+    
+    "services": [
+        {"name": "wifi", "module":"svc_wifi",  "wifi":"wifi_home", "disconnect":true},
+        {"name": "mqtt", "module":"svc_mqtt",  "broker":"mqtt_hivemq" },
+
+        {"name": "log",  "module":"svc_log",   "pub_log":"psos/e01/log" },
+    
+        {"name": "temp", "module":"svc_dht11", "dht11_pin":5,
+             "subscr_upd":"psos/e01/dht/upd",   "pub_upd":"psos/e01/dht" },
+
+        {"name": "mem_use", "module":"svc_mem_use", 
+             "subscr_upd":"psos/e01/mem/upd",   "pub_upd":"psos/e01/mem" },
+             
+        {"name": "touch15", "module":"svc_touch", "pin":15, "threshold":300,
+             "pub_touch":"psos/e01/dht/upd" },
+             
+        {"name": "touch4",  "module":"svc_touch", "pin":4, "threshold":300,
+             "pub_touch":"psos/e01/mem/upd" }
+
+     ]
+}
+    
