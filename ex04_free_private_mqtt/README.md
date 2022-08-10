@@ -66,9 +66,9 @@ Note the following changes from the previous websocket page:
 
 Press connect and you should be able to connect to your HiveMQ broker!
 
-Now subscribe to the same topic as the previous example, to the topic `psos/#` with a QoS of 0.
+Subscribe to the same topic as the previous example, to the topic `psos/#` with a QoS of 0.
 
-Now update and run your microcontroller(s)
+Update and run your microcontroller(s)
 - save either the `esp32_psos_parms.json` or `esp8266_psos_parms.json` to the microcontroller under the name `psos_parms.json`
 - run `main.py` on the ESP32 and/or ESP8266
 
