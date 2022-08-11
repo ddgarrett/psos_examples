@@ -40,5 +40,7 @@ PSOS Examples
 6. LCD and Pipe
     - Use LCD and pipe services to display temperature and memory usage on an LCD, again without any custom code, just via JSON parameters
 
+7. Touch Feedback
+    - Add more `svc_touch` services and have all `svc_touch` use the hourglass LCD screen feedback when touched
 
 
